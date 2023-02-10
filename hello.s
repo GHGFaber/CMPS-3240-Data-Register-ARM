@@ -19,7 +19,31 @@ _b3:
 	ldr w2, [x1,#8]
 	add w2, w2, #100
 	str w2, [x1,#8]
-_b4:
+
+_b4:				#copy coyote to fox	
+	ldr x3, =fox
+	ldr w2, [x1,#0]		
+	str w2, [x3,#0]
+
+	ldr w2, [x1,#4]
+	str w2, [x3,#4]
+
+	ldr w2, [x1,#8]
+	str w2, [x3,#8]
+
+	ldr w2, [x1,#12]
+	str w2, [x3,#12]
+
+	ldr w2, [x1,#16]
+	str w2, [x3,#16]
+
+	ldr w2, [x1,#20]
+	str w2, [x3,#20]
+
+	ldr w2, [x1,#24]
+	str w2, [x3,#24]
+
+_b5:
 	mov x8, #93
 	mov x0, #0
 	svc #0
